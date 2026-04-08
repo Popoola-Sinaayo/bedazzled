@@ -16,7 +16,7 @@ function toggleByValue(selectEl, expectedValue, targetEl) {
 const EMAILJS_PUBLIC_KEY = "rfNIxlHzT7yehopFz";
 const EMAILJS_SERVICE_ID = "service_c7n9j9u";
 const EMAILJS_TEMPLATE_ID = "template_pd0x5al";
-const RECIPIENT_EMAIL = "hello@bedazzled.com";
+const RECIPIENT_EMAIL = "support@babble-translate.com";
 
 function toggleVenueName(typeSelectId, venueWrapId) {
     const typeSelect = document.getElementById(typeSelectId);
