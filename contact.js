@@ -13,9 +13,9 @@ function toggleByValue(selectEl, expectedValue, targetEl) {
     handler();
 }
 
-const EMAILJS_PUBLIC_KEY = "YOUR_EMAILJS_PUBLIC_KEY";
-const EMAILJS_SERVICE_ID = "YOUR_EMAILJS_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "rfNIxlHzT7yehopFz";
+const EMAILJS_SERVICE_ID = "service_c7n9j9u";
+const EMAILJS_TEMPLATE_ID = "template_pd0x5al";
 const RECIPIENT_EMAIL = "hello@bedazzled.com";
 
 function toggleVenueName(typeSelectId, venueWrapId) {
