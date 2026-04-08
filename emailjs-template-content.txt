@@ -1,0 +1,61 @@
+EMAILJS TEMPLATE SETUP (COPY VALUES BELOW)
+Subject: New Bedazzled Enquiry - {{full_name}} - {{event_type}}
+To Email: {{to_email}}
+Reply-To Email: {{email_address}}
+
+EMAIL BODY (PASTE INTO EMAILJS TEMPLATE MESSAGE)
+New enquiry submitted from Bedazzled website.
+
+Summary
+{{summary}}
+
+Contact Details
+Full Name: {{full_name}}
+Email Address: {{email_address}}
+Phone Number: {{phone_number}}
+Gender: {{gender}}
+Home Postcode: {{home_postcode}}
+Home Address: {{home_address}}
+
+Partner Details
+Partner Name: {{partner_name}}
+Partner Gender: {{partner_gender}}
+
+Event Details
+Event Type: {{event_type}}
+Milestone: {{milestone}}
+Other Event Description: {{event_other_description}}
+Event Date: {{event_date}}
+
+Location 1
+Postcode: {{location_1_postcode}}
+Address: {{location_1_address}}
+Type: {{location_1_type}}
+Hotel/Restaurant Name: {{location_1_venue_name}}
+Other Type Description: {{location_1_type_other}}
+Service: {{location_1_service}}
+
+Location 2
+Postcode: {{location_2_postcode}}
+Address: {{location_2_address}}
+Type: {{location_2_type}}
+Hotel/Restaurant Name: {{location_2_venue_name}}
+Other Type Description: {{location_2_type_other}}
+Service: {{location_2_service}}
+
+Location 3
+Postcode: {{location_3_postcode}}
+Address: {{location_3_address}}
+Type: {{location_3_type}}
+Hotel/Restaurant Name: {{location_3_venue_name}}
+Other Type Description: {{location_3_type_other}}
+Service: {{location_3_service}}
+
+Request Details
+Message: {{message}}
+Special Requests: {{special_requests}}
+Budget: {{budget}}
+Callback Requested: {{callback_requested}}
+Agreed Privacy Policy: {{agreed_privacy}}
+Agreed Terms: {{agreed_terms}}
+Attachment File Names: {{attachment_names}}

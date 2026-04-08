@@ -2,352 +2,153 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Bedazzled | Luxury Event Curation</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bedazzled creates luxury romantic experiences, anniversaries, proposals, and surprise moments across the UK and beyond.">
+    <title>Bedazzled | Making Dreams Come True</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="bg-glow"></div>
 
-<div class="bg-glow"></div>
-
-<nav>
-    <div class="logo" onclick="navigateTo('home')">
-        <div class="logo-text">
-            <img src="./assets/logo.jpeg">
-            <span>Luxury Event Curation</span>
+    <header class="site-header">
+        <div class="header-inner">
+            <button id="menuBtn" class="menu-toggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="logo">
+                <img src="./assets/logo.jpeg" alt="Bedazzled logo">
+            </a>
+            <a href="contact.html" class="btn-ios header-contact-btn" aria-label="Contact Us"><i class="fas fa-envelope" aria-hidden="true"></i><span class="header-contact-label">Contact Us</span></a>
         </div>
-    </div>
-    <div class="nav-links" id="navLinks">
-        <a href="#" data-page="home" onclick="navigateTo('home')" class="active">Home</a>
-        <a href="#" data-page="gallery" onclick="navigateTo('gallery')">Gallery</a>
-        <a href="#" data-page="packages" onclick="navigateTo('packages')">Packages</a>
-        <button class="btn-ios" onclick="openBookingModal()">Book Now</button>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
-</nav>
+    </header>
 
-<main id="app">
-    <div id="homePage">
-        
-        <section class="hero section">
-            <h2>Creating Unforgettable <br><em>Moments of Love</em></h2>
-            <p style="max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem;">We are Bedazzled – a luxury event curation company specializing in marriage proposals, anniversaries, and romantic date nights. From concept to "yes," we deliver seamless, breathtaking experiences across the world's most stunning locations.</p>
-            
-            <div class="hero-stats">
-                <div class="stat"><span class="stat-number">1,200+</span>Proposals Planned</div>
-                <div class="stat"><span class="stat-number">100%</span>Success Rate</div>
-                <div class="stat"><span class="stat-number">25+</span>Destinations</div>
+    <aside id="navDrawer" class="nav-drawer" aria-label="Site menu">
+        <button id="closeDrawerBtn" class="btn-ios btn-ghost">Close</button>
+        <ul class="nav-list" style="margin-top: 1rem;">
+            <li><a data-close-drawer href="index.html">Home</a></li>
+            <li><a data-close-drawer href="services.html">Services</a></li>
+            <li><a data-close-drawer href="anniversaries.html">Anniversaries</a></li>
+            <li><a data-close-drawer href="romantic-dinner.html">Romantic Dinner</a></li>
+            <li><a data-close-drawer href="proposals.html">Proposals</a></li>
+            <li><a data-close-drawer href="destination-decor.html">Destination Decor</a></li>
+            <li><a data-close-drawer href="contact.html">Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <main class="page-main">
+        <section class="section hero">
+            <h1 class="reveal">Making Dreams Come True!</h1>
+            <div class="intro-video reveal">
+                <video autoplay muted loop playsinline controls poster="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80">
+                    <source src="https://cdn.coverr.co/videos/coverr-candles-and-flowers-on-a-romantic-table-1579/1080p.mp4" type="video/mp4">
+                </video>
+                <span class="video-caption">A glimpse into the Bedazzled experience</span>
             </div>
-            
-            <button class="btn-ios" onclick="openBookingModal()">Start Planning Your Moment →</button>
-            
-            <div class="hero-gallery">
-                <div class="hero-img" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800')"></div>
-                <div class="hero-img" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=1000')"></div>
-                <div class="hero-img" style="background-image: url('https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?auto=format&fit=crop&q=80&w=800')"></div>
+            <div class="intro-media reveal" data-slider>
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1604942030135-73e2f02503b3?fm=jpg&q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Romantic rooftop proposal">
+                        <span class="slide-caption">Luxury Proposal Moments</span>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80" alt="Dinner setup">
+                        <span class="slide-caption">Romantic Dinner Styling</span>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80" alt="Couple celebrating anniversary">
+                        <span class="slide-caption">Elegant Anniversary Experiences</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <button class="slider-dot active" type="button"></button>
+                <button class="slider-dot" type="button"></button>
+                <button class="slider-dot" type="button"></button>
+            </div>
+
+            <p class="muted reveal" style="max-width: 860px; margin: 1.4rem auto 0;">
+                We are Bedazzled, a luxury event curation company specializing in romantic surprise packages, anniversaries and proposals.
+                From concept to flawless execution, we deliver breathtaking moments across iconic locations.
+            </p>
+
+            <div class="stats-wrap reveal">
+                <div class="stat-hero">1,340 Romantic Events</div>
+                <ul class="pill-list">
+                    <li>Romantic Surprise Packages</li>
+                    <li>Anniversaries</li>
+                    <li>Proposals</li>
+                </ul>
             </div>
         </section>
 
-        <div class="featured-on">
-            <div class="featured-track">
-                <div class="featured-item">AS SEEN IN VOGUE</div>
-                <div class="featured-item">BRIDES MAGAZINE</div>
-                <div class="featured-item">THE KNOT</div>
-                <div class="featured-item">HARPER'S BAZAAR</div>
-                <div class="featured-item">TATLER</div>
-                <div class="featured-item">AS SEEN IN VOGUE</div>
-                <div class="featured-item">BRIDES MAGAZINE</div>
-                <div class="featured-item">THE KNOT</div>
-                <div class="featured-item">HARPER'S BAZAAR</div>
-                <div class="featured-item">TATLER</div>
+        <section class="section">
+            <h2 class="reveal">What We Do...</h2>
+            <div class="cards-grid">
+                <article class="card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1460364157752-926555421a7e?auto=format&fit=crop&w=900&q=80" alt="Anniversary setup">
+                    </div>
+                    <div class="card-body">
+                        <h3>Anniversaries</h3>
+                        <p class="muted">Tailored anniversary experiences with luxury styling and personal touches.</p>
+                        <a href="anniversaries.html" class="btn-ios" style="margin-top: 1rem;">View Packages</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Romantic dinner setup">
+                    </div>
+                    <div class="card-body">
+                        <h3>Romantic Dinner</h3>
+                        <p class="muted">Intimate dinner concepts with floral, candle and destination decor options.</p>
+                        <a href="romantic-dinner.html" class="btn-ios" style="margin-top: 1rem;">View Packages</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80" alt="Wedding proposal setup">
+                    </div>
+                    <div class="card-body">
+                        <h3>Wedding Proposals</h3>
+                        <p class="muted">Beautiful proposal setups designed to reflect your relationship and story.</p>
+                        <a href="proposals.html" class="btn-ios" style="margin-top: 1rem;">View Packages</a>
+                    </div>
+                </article>
             </div>
+        </section>
+
+        <section class="section feature-banner reveal">
+            <h2>Plan Your Experience</h2>
+            <p class="muted" style="max-width: 700px; margin-top: 0.6rem;">
+                Explore service galleries and package options, then share your dream setup through our Contact Us form.
+            </p>
+            <div style="margin-top: 1.1rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <a href="services.html" class="btn-ios">Explore Services</a>
+                <a href="contact.html" class="btn-ios btn-ghost">Start Your Enquiry</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://pinterest.com" target="_blank" rel="noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="terms.html">Terms and Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; <span id="year"></span> Bedazzled. All rights reserved.</p>
         </div>
+    </footer>
 
-        <section class="section">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>Watch Our Story</h2>
-                <p style="color: #666;">See how we bring magic to life across the globe.</p>
-            </div>
-            <div class="story-video">
-                <div class="video-overlay">
-                    <div class="play-btn"><i class="fas fa-play"></i></div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200" style="width:100%; height:100%; object-fit:cover;" alt="Video Cover">
-            </div>
-        </section>
-
-        <section class="section" style="background: var(--soft-blush); border-radius: 80px 80px 0 0;">
-            <div class="text-center">
-                <h2>How It Works</h2>
-                <p style="color: #666;">A completely stress-free roadmap to your "Yes!"</p>
-            </div>
-            <div class="step-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h3 style="margin-top: 2rem; font-family: 'Playfair Display'; font-size: 1.5rem;">The Consultation</h3>
-                    <p style="color: #666; margin-top: 0.5rem;">We discuss your partner's tastes, your ideal budget, and stunning potential locations.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h3 style="margin-top: 2rem; font-family: 'Playfair Display'; font-size: 1.5rem;">Bespoke Design</h3>
-                    <p style="color: #666; margin-top: 0.5rem;">Our expert team curates a custom moodboard and a detailed layout of your personalized setup.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h3 style="margin-top: 2rem; font-family: 'Playfair Display'; font-size: 1.5rem;">Seamless Setup</h3>
-                    <p style="color: #666; margin-top: 0.5rem;">On the big day, we handle absolutely everything behind the scenes. You simply show up and shine.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2>Iconic Destinations</h2>
-                <p style="max-width: 800px; margin: 0 auto; color: #666;">From the historic, rain-kissed streets of London to the sun-drenched, iconic cliffs of Santorini, we meticulously plan luxury experiences in the world's most romantic corners. Let us take you there.</p>
-            </div>
-            <div class="dest-grid">
-                <div class="dest-card">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=600" alt="London">
-                    <div class="dest-info">
-                        <h3>London, UK</h3>
-                        <p style="color: #666;">Classic British elegance paired with breathtaking skyline views or exclusive, hidden garden retreats.</p>
-                    </div>
-                </div>
-                <div class="dest-card">
-                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=600" alt="Paris">
-                    <div class="dest-info">
-                        <h3>Paris, France</h3>
-                        <p style="color: #666;">The undeniable city of love, offering private, candlelit terraces and unobstructed views of the Eiffel Tower.</p>
-                    </div>
-                </div>
-                <div class="dest-card">
-                    <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=600" alt="Santorini">
-                    <div class="dest-info">
-                        <h3>Santorini, Greece</h3>
-                        <p style="color: #666;">Golden Caldera sunsets and pristine whitewashed luxury combine for a cinematic dream proposal.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="text-center">Your Questions, Answered</h2>
-            <div class="faq-accordion" id="faqContainer">
-                </div>
-        </section>
-    </div>
-
-    <div id="dynamicPage" style="display: none;"></div>
-</main>
-
-<footer>
-    <div class="footer-links">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <a href="#" onclick="navigateTo('gallery')">Gallery</a>
-        <a href="#" onclick="navigateTo('packages')">Packages</a>
-    </div>
-    <p>&copy; 2026 Bedazzled — Luxury Event Curators. London · Paris · New York · Santorini</p>
-    <div class="social-icons">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-tiktok"></i>
-        <i class="fab fa-pinterest"></i>
-    </div>
-</footer>
-
-<div class="whatsapp-icon" onclick="window.open('https://wa.me/447493267887', '_blank')">
-    <i class="fab fa-whatsapp"></i>
-</div>
-
-<div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <h2 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 1.5rem;">Reserve Your Experience</h2>
-        <form id="bookingForm" onsubmit="event.preventDefault(); alert('Inquiry Sent Successfully!'); closeModal();">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <select required id="modalSelect">
-                <option value="" disabled selected>Select Service</option>
-                <option value="Marriage Proposal">Marriage Proposal</option>
-                <option value="Anniversary Setup">Anniversary Setup</option>
-                <option value="Date Night">Date Night</option>
-                <option value="Custom/Bespoke">Custom/Bespoke</option>
-            </select>
-            <input type="date" required>
-            <textarea placeholder="Tell us about your vision..." rows="3"></textarea>
-            <button type="submit" class="btn-ios" style="width:100%; margin-top: 10px;">Submit Inquiry</button>
-        </form>
-        <button onclick="closeModal()" style="background:none; border:none; color:#888; margin-top:1.5rem; cursor:pointer; width:100%; font-weight: 600;">Close Window</button>
-    </div>
-</div>
-
-<script>
-    const homePage = document.getElementById('homePage');
-    const dynamicPage = document.getElementById('dynamicPage');
-    const modal = document.getElementById('bookingModal');
-    const navLinks = document.getElementById('navLinks');
-    const modalSelect = document.getElementById('modalSelect');
-
-    function toggleMenu() { navLinks.classList.toggle('active'); }
-
-    // Modal Logic Reverted to Original
-    function openBookingModal(prefillValue = "") { 
-        if(prefillValue) {
-            // If it's a specific package or gallery item, add it as an option if it doesn't exist
-            let exists = false;
-            for(let i=0; i<modalSelect.options.length; i++) {
-                if(modalSelect.options[i].value === prefillValue) exists = true;
-            }
-            if(!exists) {
-                const newOption = new Option(prefillValue, prefillValue);
-                modalSelect.add(newOption);
-            }
-            modalSelect.value = prefillValue;
-        } else {
-            modalSelect.selectedIndex = 0;
-        }
-        
-        modal.classList.add('open'); 
-        document.body.style.overflow = 'hidden'; 
-    }
-    
-    function closeModal() { 
-        modal.classList.remove('open'); 
-        document.body.style.overflow = 'auto'; 
-    }
-    
-    window.onclick = (e) => { if(e.target === modal) closeModal(); }
-
-    // Expanded FAQ Logic
-    const faqs = [
-        { q: "Why book Bedazzled?", a: "With over 1,200 proposals and 13 years of experience, we are the leading luxury proposal planners. Our team ensures zero stress and 100% unforgettable moments." },
-        { q: "How do we plan together?", a: "We start with a consultation (in-person or virtual), curate moodboards, then handle logistics and setup." },
-        { q: "What is the lead time?", a: "Typically 2-8 weeks depending on complexity. We can also accommodate last-minute requests with our express service." },
-        { q: "How much does a proposal cost?", a: "Packages start from £1,500 for intimate setups, reaching bespoke experiences from £5,000+ for full destination curation." },
-        { q: "I don't know what I want. Can you help?", a: "No problem! Our design team will guide you with inspirational concepts tailored to your love story." },
-        { q: "What happens on the day?", a: "We arrive hours before, set up everything, coordinate with photographers, and ensure a seamless surprise – you just show up." }
-    ];
-
-    function renderFaqs() {
-        const container = document.getElementById('faqContainer');
-        container.innerHTML = faqs.map((f, i) => `
-            <div class="faq-item">
-                <div class="faq-header" onclick="toggleFaq(this)">
-                    ${f.q} <i class="fas fa-plus faq-icon"></i>
-                </div>
-                <div class="faq-content">${f.a}</div>
-            </div>
-        `).join('');
-    }
-
-    function toggleFaq(header) {
-        const item = header.parentElement;
-        const isActive = item.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-        if (!isActive) item.classList.add('active');
-    }
-
-    // Navigation and Page Rendering
-    function navigateTo(pageId) {
-        navLinks.classList.remove('active');
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.classList.toggle('active', a.getAttribute('data-page') === pageId);
-        });
-
-        if(pageId === 'home') {
-            homePage.style.display = 'block';
-            dynamicPage.style.display = 'none';
-        } else {
-            homePage.style.display = 'none';
-            dynamicPage.style.display = 'block';
-            if(pageId === 'gallery') dynamicPage.innerHTML = renderGallery();
-            if(pageId === 'packages') dynamicPage.innerHTML = renderPackages();
-        }
-        window.scrollTo(0,0);
-    }
-
-    // GALLERY: Original 6 images restored
-    function renderGallery() {
-        const imgs = [
-            ['Romantic Rooftop', 'https://images.unsplash.com/photo-1519671482749-fd09be7c5bf4?auto=format&fit=crop&w=800'],
-            ['Floral Arch', 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800'],
-            ['Candlelit Dinner', 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=800'],
-            ['Balloons Decor', 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800'],
-            ['Sunset View', 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800'],
-            ['Luxury Setup', 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800']
-        ];
-        return `
-        <section class="section" style="padding-top:10rem; min-height: 80vh;">
-            <h2 style="text-align:center;">Our Curated Gallery</h2>
-            <p style="text-align:center; color:#666; margin-bottom: 3rem;">Click any image to inquire about recreating that specific aesthetic.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
-                ${imgs.map(([title, src]) => `
-                    <div class="gallery-item" onclick="openBookingModal('${title} Style')">
-                        <img src="${src}" alt="${title}">
-                        <div class="gallery-overlay"><h4>${title}</h4></div>
-                    </div>
-                `).join('')}
-            </div>
-        </section>`;
-    }
-
-    // PACKAGES: Kept the perfect Pricing Grid from Iteration 2
-    function renderPackages() {
-        return `
-        <section class="section" style="padding-top:10rem; min-height: 80vh;">
-            <div class="text-center">
-                <h2>Luxury Packages</h2>
-                <p style="color: #666;">Standardized excellence for your big moment.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Essential</h3>
-                    <p style="font-size: 2.5rem; font-weight:700; color: var(--deep-rose); margin: 1rem 0;">£1,500</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Luxury Floral Setup</li>
-                        <li><i class="fas fa-check"></i> Professional Photographer</li>
-                        <li><i class="fas fa-check"></i> On-site Coordinator</li>
-                        <li><i class="fas fa-check"></i> 2 Hours Duration</li>
-                    </ul>
-                    <button class="btn-ios" style="width: 100%; margin-top: 1rem;" onclick="openBookingModal('Essential Package')">Select Package</button>
-                </div>
-                
-                <div class="price-card featured">
-                    <div style="position:absolute; top:20px; right:30px; background:var(--deep-rose); color:white; padding:6px 16px; border-radius:20px; font-size:0.75rem; font-weight: bold; letter-spacing: 1px;">MOST LOVED</div>
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Deluxe</h3>
-                    <p style="font-size: 2.5rem; font-weight:700; color: var(--deep-rose); margin: 1rem 0;">£3,200</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Premium Private Venue</li>
-                        <li><i class="fas fa-check"></i> Live Musician (Violin/Sax)</li>
-                        <li><i class="fas fa-check"></i> Premium Champagne Toast</li>
-                        <li><i class="fas fa-check"></i> 4K Video Highlights</li>
-                        <li><i class="fas fa-check"></i> 3 Hours Duration</li>
-                    </ul>
-                    <button class="btn-ios" style="width: 100%; margin-top: 1rem;" onclick="openBookingModal('Deluxe Package')">Select Package</button>
-                </div>
-                
-                <div class="price-card">
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Bespoke VIP</h3>
-                    <p style="font-size: 2.5rem; font-weight:700; color: var(--deep-rose); margin: 1rem 0;">Custom</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Global Destination Planning</li>
-                        <li><i class="fas fa-check"></i> Yacht or Helicopter Access</li>
-                        <li><i class="fas fa-check"></i> Live Entertainment Crew</li>
-                        <li><i class="fas fa-check"></i> Personal Butler Service</li>
-                    </ul>
-                    <button class="btn-ios" style="width: 100%; margin-top: 1rem;" onclick="openBookingModal('Bespoke VIP')">Inquire for Quote</button>
-                </div>
-            </div>
-        </section>`;
-    }
-
-    // Initialize
-    renderFaqs();
-</script>
-
+    <script src="main.js"></script>
 </body>
 </html>

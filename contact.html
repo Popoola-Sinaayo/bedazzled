@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bedazzled</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="bg-glow"></div>
+<header class="site-header"><div class="header-inner"><button id="menuBtn" class="menu-toggle"><span></span><span></span><span></span></button><a href="index.html" class="logo"><img src="./assets/logo.jpeg" alt="Bedazzled logo"></a><a href="contact.html" class="btn-ios header-contact-btn" aria-label="Contact Us"><i class="fas fa-envelope" aria-hidden="true"></i><span class="header-contact-label">Contact Us</span></a></div></header>
+<aside id="navDrawer" class="nav-drawer"><button id="closeDrawerBtn" class="btn-ios btn-ghost">Close</button><ul class="nav-list" style="margin-top:1rem;"><li><a data-close-drawer href="index.html">Home</a></li><li><a data-close-drawer href="services.html">Services</a></li></ul></aside>
+
+<main class="page-main">
+    <section class="section hero">
+        <h1 class="reveal">Get In Touch</h1>
+        <p class="muted reveal">Tell us your dream concept and we will curate your perfect experience.</p>
+    </section>
+
+    <section class="section">
+        <div class="contact-layout">
+            <article class="form-card reveal">
+                <form id="contactForm">
+                    <div class="field-grid two">
+                        <div><label>Name</label><input id="fullName" name="full_name" type="text" required></div>
+                        <div><label>Email</label><input id="emailAddress" name="email_address" type="email" required></div>
+                    </div>
+
+                    <div class="field-grid two" style="margin-top:0.75rem;">
+                        <div><label>Gender</label><select id="gender" name="gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
+                        <div><label>Phone Number</label><input id="phoneNumber" name="phone_number" type="tel" required></div>
+                    </div>
+
+                    <div class="field-grid two" style="margin-top:0.75rem;">
+                        <div><label>Home Postcode (UK)</label><input id="homePostcode" name="home_postcode" type="text" placeholder="e.g. SW1A 1AA"></div>
+                        <div><label>Home Address</label><input id="homeAddress" name="home_address" type="text" placeholder="Address line"></div>
+                    </div>
+
+                    <div class="field-grid two" style="margin-top:0.75rem;">
+                        <div><label>Partner's Name</label><input id="partnerName" name="partner_name" type="text"></div>
+                        <div><label>Partner's Gender</label><select id="partnerGender" name="partner_gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
+                    </div>
+
+                    <div class="field-grid two" style="margin-top:0.75rem;">
+                        <div>
+                            <label>Event</label>
+                            <select id="eventType" name="event_type" required>
+                                <option value="">Select Event</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="dinner-date">Dinner date</option>
+                                <option value="proposal">Proposal</option>
+                                <option value="other">Other (describe)</option>
+                            </select>
+                        </div>
+                        <div id="milestoneWrap" class="hidden">
+                            <label>Milestone</label>
+                            <select id="milestone" name="milestone" data-conditional-required="true">
+                                <option value="">Select Milestone</option>
+                                <option>1st</option><option>2nd</option><option>3rd</option><option>4th</option><option>5th</option><option>10th</option><option>15th</option><option>20th</option><option>25th</option><option>30th</option><option>40th</option><option>50th</option><option>60th</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="eventOtherWrap" class="hidden" style="margin-top:0.75rem;">
+                        <label>Other Event (describe)</label>
+                        <input id="eventOtherDescription" name="event_other_description" type="text" data-conditional-required="true" placeholder="Describe your event type">
+                    </div>
+
+                    <div style="margin-top:0.75rem;">
+                        <label>Event Date</label>
+                        <input id="eventDate" name="event_date" type="text" required>
+                    </div>
+
+                    <h3 style="margin-top:1.2rem;">Event Locations</h3>
+
+                    <div class="form-card" style="margin-top:0.65rem;">
+                        <h4>Location 1</h4>
+                        <div class="field-grid two"><div><label>Postcode (UK)</label><input id="location1Postcode" name="location_1_postcode" type="text"></div><div><label>Address</label><input id="location1Address" name="location_1_address" type="text"></div></div>
+                        <div class="field-grid two" style="margin-top:0.7rem;"><div><label>Type</label><select id="locationType1" name="location_1_type"><option value="">Select</option><option value="airbnb">Airbnb</option><option value="hotel">Hotel</option><option value="restaurant">Restaurant</option><option value="other">Other (describe)</option></select></div><div id="venueNameWrap1" class="hidden"><label>Hotel/Restaurant Name</label><input id="location1VenueName" name="location_1_venue_name" type="text"></div></div>
+                        <div id="locationTypeOtherWrap1" class="hidden" style="margin-top:0.7rem;"><label>Other Type (describe)</label><input id="location1TypeOther" name="location_1_type_other" type="text" data-conditional-required="true" placeholder="Describe location type"></div>
+                        <div style="margin-top:0.7rem;"><label>Service</label><select id="location1Service" name="location_1_service"><option>Dinner Decor</option><option>Hotel Room Decor</option><option>Bedroom Trail</option></select></div>
+                    </div>
+
+                    <div class="form-card" style="margin-top:0.65rem;">
+                        <h4>Location 2</h4>
+                        <div class="field-grid two"><div><label>Postcode (UK)</label><input id="location2Postcode" name="location_2_postcode" type="text"></div><div><label>Address</label><input id="location2Address" name="location_2_address" type="text"></div></div>
+                        <div class="field-grid two" style="margin-top:0.7rem;"><div><label>Type</label><select id="locationType2" name="location_2_type"><option value="">Select</option><option value="airbnb">Airbnb</option><option value="hotel">Hotel</option><option value="restaurant">Restaurant</option><option value="other">Other (describe)</option></select></div><div id="venueNameWrap2" class="hidden"><label>Hotel/Restaurant Name</label><input id="location2VenueName" name="location_2_venue_name" type="text"></div></div>
+                        <div id="locationTypeOtherWrap2" class="hidden" style="margin-top:0.7rem;"><label>Other Type (describe)</label><input id="location2TypeOther" name="location_2_type_other" type="text" data-conditional-required="true" placeholder="Describe location type"></div>
+                        <div style="margin-top:0.7rem;"><label>Service</label><select id="location2Service" name="location_2_service"><option>Dinner Decor</option><option>Hotel Room Decor</option><option>Bedroom Trail</option></select></div>
+                    </div>
+
+                    <div class="form-card" style="margin-top:0.65rem;">
+                        <h4>Location 3</h4>
+                        <div class="field-grid two"><div><label>Postcode (UK)</label><input id="location3Postcode" name="location_3_postcode" type="text"></div><div><label>Address</label><input id="location3Address" name="location_3_address" type="text"></div></div>
+                        <div class="field-grid two" style="margin-top:0.7rem;"><div><label>Type</label><select id="locationType3" name="location_3_type"><option value="">Select</option><option value="airbnb">Airbnb</option><option value="hotel">Hotel</option><option value="restaurant">Restaurant</option><option value="other">Other (describe)</option></select></div><div id="venueNameWrap3" class="hidden"><label>Hotel/Restaurant Name</label><input id="location3VenueName" name="location_3_venue_name" type="text"></div></div>
+                        <div id="locationTypeOtherWrap3" class="hidden" style="margin-top:0.7rem;"><label>Other Type (describe)</label><input id="location3TypeOther" name="location_3_type_other" type="text" data-conditional-required="true" placeholder="Describe location type"></div>
+                        <div style="margin-top:0.7rem;"><label>Service</label><select id="location3Service" name="location_3_service"><option>Dinner Decor</option><option>Hotel Room Decor</option><option>Bedroom Trail</option></select></div>
+                    </div>
+
+                    <div style="margin-top:0.8rem;"><label>Message</label><textarea id="message" name="message" rows="3" placeholder="Hey Bedazzled..."></textarea></div>
+                    <div style="margin-top:0.75rem;"><label>Special Requests</label><textarea id="specialRequests" name="special_requests" rows="3" placeholder="Tell us your dream idea..."></textarea></div>
+
+                    <div style="margin-top:0.75rem;">
+                        <label>Budget</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select Budget</option>
+                            <option>£500 - £1,000</option>
+                            <option>£1,000 - £2,500</option>
+                            <option>£2,500 - £5,000</option>
+                            <option>£5,000 - £10,000</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-top:0.75rem;"><label>Attachments (Show us your dream idea)</label><input id="attachments" name="attachments" type="file" multiple></div>
+
+                    <label class="checkbox-wrap"><input id="callbackRequested" name="callback_requested" type="checkbox"><span>I would like a call-back to discuss via phone. (Optional)</span></label>
+                    <label class="checkbox-wrap"><input id="agreePrivacy" name="agree_privacy" type="checkbox" required><span>I agree with the handling of my data in accordance with Bedazzled's Privacy Policy. (Mandatory)</span></label>
+                    <label class="checkbox-wrap"><input id="agreeTerms" name="agree_terms" type="checkbox" required><span>I agree to Bedazzled's Terms and Conditions for Service. (Mandatory)</span></label>
+
+                    <button id="submitEnquiryBtn" type="submit" class="btn-ios" style="margin-top:1rem;">Submit Enquiry</button>
+                    <p id="formStatus" class="form-status" aria-live="polite"></p>
+                </form>
+            </article>
+
+            <aside class="contact-card reveal">
+                <h3>Contact Details</h3>
+                <p style="margin-top:0.8rem;"><strong>Phone</strong><br>+44 7493 267887</p>
+                <p style="margin-top:0.8rem;"><strong>Email</strong><br>hello@bedazzledevents.co.uk</p>
+                <p style="margin-top:0.8rem;"><strong>Address</strong><br>London, United Kingdom</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noreferrer"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://pinterest.com" target="_blank" rel="noreferrer"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer"><div class="footer-inner"><div class="social-links"><a href="https://instagram.com" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a><a href="https://tiktok.com" target="_blank" rel="noreferrer"><i class="fab fa-tiktok"></i></a><a href="https://pinterest.com" target="_blank" rel="noreferrer"><i class="fab fa-pinterest"></i></a></div><div class="footer-links"><a href="terms.html">Terms and Conditions</a><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact Us</a></div><p>&copy; <span id="year"></span> Bedazzled. All rights reserved.</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="main.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
